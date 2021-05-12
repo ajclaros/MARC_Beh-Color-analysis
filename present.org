@@ -1,0 +1,177 @@
+#+Title: /Astatotilapia Burtoni/ :
+#+SUBTITLE: Behavior and Color Analysis
+#+Author: Author: Andrew Claros  Mentor:Sebastian Alvarado
+
+#+OPTIONS: toc:nil num:nil date:nil
+#+LATEX_HEADER: \usepackage[margin=0.5in]{geometry}
+#+LATEX_HEADER: \include{preamble}
+#+LATEX_HEADER: \usepackage{cancel}
+#+LATEX_HEADER: \usepackage{mathtools}
+#+LATEX_HEADER: \usepackage{mathrsfs}
+#+REVEAL_ROOT: ./
+
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:t
+#+OPTIONS: reveal_mathjax:t reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_width:1440 reveal_height:2560
+#+OPTIONS: toc:nil
+#+OPTIONS: ^:{}
+#+REVEAL_MARGIN: 0.05
+#+REVEAL_MIN_SCALE: 1.5
+#+REVEAL_MAX_SCALE: 5.5
+#+REVEAL_TRANS: cube
+#+REVEAL_THEME: moon
+#+REVEAL_TITLE_SLIDE: <section class="title-slide">    <h1>%t</h1> <h2> %s </h2> <h4>Author: Andrew Claros</h4> <h4>Mentor: Sebastian Alvarado PhD</h4></section>
+
+#+REVEAL_EXTRA_CSS: zenburn.css
+* Background
+#+BEGIN_NOTES
+- Lake Tanganyika: The second largest lake in Africa, and second oldest saltwater lake in the world
+- Which contributes to its massive diversity, most notably its fish population
+- color-morphs: reversible
+#+END_NOTES
+
+#+ATTR_REVEAL: :frag appear
+#+ATTR_REVEAL: :frag t :frag_idx 2
+- Originates in Lake Tanganyika, Tanzinia
+#+ATTR_REVEAL: :frag t :frag_idx 3
+- Two Color-morphs: Yellow and Blue
+#+ATTR_REVEAL: :frag t :frag_idx 4
+- Color linked to behavioral differences
+- (bright color associated with dominance)
+
+#+ATTR_REVEAL: :frag nil
+[[./fish_background.png]]
+* Aim:
+#+ATTR_REVEAL: :frag appear
+#+ATTR_REVEAL: :frag t :frag_idx 1
+- Identify differences in behavior for:
+  1) Dominant vs. Subordinate
+  2) Blue vs. Yellow
+
+#+ATTR_REVEAL: :frag t :frag_idx 2
+- Quantify color differences (blue vs. yellow)
+#+ATTR_REVEAL: :frag nil
+[[./fish_background.png]]
+* Behavior analysis: data
+#+REVEAL_TRANS: nil
+[[./whatsneeded.png]]
+** Methods: Markov chain modeling
+#+BEGIN_NOTES
+- We take videos of fish about an hours length, and score their behavior
+- an example is at time 30sec, a fish is chasing around another fish
+- we go about and annotate a whole hour of the fish
+#+END_NOTES
+
+#+ATTR_REVEAL: :frag appear
+#+ATTR_REVEAL: :frag t :frag_idx 1
+  [[./abstract_markov.png]]
+** Data transformations
+- Time in behavior
+#+REVEAL_TRANS: nil
+#+REVEAL_HTML:<p> <img src="./behavior_time_prob.png" width="950" height="700" ></p>
+** Data transformations
+- Transitions
+#+REVEAL_TRANS: nil
+#+REVEAL_HTML:<p> <img src="./transition_prob.png" width="950" height="700" ></p>
+** Markov chain visualization: (Territorial) Dominant
+[[./T_avg.png]]
+** Markov chain visualization: (Non-Territorial) Subordinate
+[[./NT_avg.png]]
+** Markov chain: plots T vs NT
+[[./behavior_time_dyad_barplot.png]]
+
+** Markov chain visualization: Yellow
+[[./Yellow_avg.png]]
+** Markov chain visualization: Blue
+[[./Blue_avg.png]]
+** Markov chain: plots
+[[./behavior_time_barplot.png]]
+* AIM 2: Quantification of color
+- We want to /quantify color differences/ because color is linked to behavior
+** Quantification of color: Color representation
+
+#+ATTR_REVEAL: :frag appear :frag_idx 1
+- ($\mathrm{R}_{\text{ed}},\mathrm{G}_{\text{reen}}, \mathrm{B}_{\text{lue}}$):=(1, 0, 0)
+
+#+REVEAL_HTML:<p> <img src='./red.jpeg' width="300" height="300" ></p>
+** Quantification of color: Color representation
+#+REVEAL_TRANS: nil
+#+ATTR_REVEAL: :frag nil
+- ($\mathrm{R}_{\text{ed}},\mathrm{G}_{\text{reen}}, \mathrm{B}_{\text{lue}}$):=(0, 1, 0)
+#+ATTR_REVEAL: :frag nil
+#+REVEAL_HTML:<p> <img src='./green.jpeg' width="300" height="300" ></p>
+** Quantification of color: Color representation
+#+REVEAL_TRANS: nil
+#+ATTR_REVEAL: :frag nil
+- ($\mathrm{R}_{\text{ed}},\mathrm{G}_{\text{reen}}, \mathrm{B}_{\text{lue}}$):=(0, 0, 1)
+#+REVEAL_HTML: <p> <img src='./blueimage.jpeg' width="300" height="300" ></p>
+** Quantification of color: Color representation
+#+REVEAL_TRANS: nil
+#+ATTR_REVEAL: :frag nil
+- ($\mathrm{R}_{\text{ed}},\mathrm{G}_{\text{reen}}, \mathrm{B}_{\text{lue}}$):=(0, 0, 0)
+#+REVEAL_HTML: <p> <img src='./black.jpeg' width="300" height="300" ></p>
+** Quantification of color: Color representation
+#+REVEAL_TRANS: nil
+#+ATTR_REVEAL: :frag nil
+- ($\mathrm{R}_{\text{ed}},\mathrm{G}_{\text{reen}}, \mathrm{B}_{\text{lue}}$):=(1, 1, 1)
+#+REVEAL_HTML: <p> <img src='./white.jpeg' width="300" height="300" ></p>
+
+** Quantification of color: Color representation
+#+REVEAL_TRANS: nil
+#+ATTR_REVEAL: :frag nil
+- ($\mathrm{H}_{\text{ue}},\mathrm{S}_{\text{aturation}},\mathrm{V}_{\text{alue}})$
+#+REVEAL_HTML: <p> <img src='./hsv.png' width="300" height="300" ></p>
+** Quantification of color: Color representation
+- ...and many more
+
+** Quantification of color: Color representation, why?
+#+ATTR_REVEAL: :frag appear
+- Though data is the same, the type of representation makes certain situations easier
+** Quantification of color: Color representation, why?
+#+REVEAL_TRANS: nil
+- Though data is the same, the type of representation makes certain situations easier
+#+REVEAL_HTML:<div id="row" > <img class="left" src="colorcube.jpg" height="300" width="400"  /> <img class="left" src="hsv_cmap.png" height="300" width="300" height="200" /> </div>
+
+* Quantification of color: Graphical interface
+** Interface
+[[./guiShow.png]]
+** Interface
+#+REVEAL_TRANS: nil
+[[./cielab.png]]
+** selecting a color range
+#+REVEAL_TRANS: nil
+#+REVEAL_HTML: <p> <img src='./colorselection.gif' width="700" height="500" ></p>
+** Quantification of color: extracting image
+[[./labfish.jpg]]
+** Masking an image
+** Masking an image
+#+REVEAL_TRANS: nil
+[[./mask.png]]
+** Quantification of color: Histogram
+[[./hsv_blue_yellow.png]]
+** Quantification of color: Kolmogorov-Smirnov test
+[[./kstest.png]]
+** Quantification of color:  Mann-Whitney U test
+[[./mannwhitney.png]]
+* Conclusion
+#+ATTR_REVEAL: :frag appear
+- Markov chains paired with bar plots allow us to analyze behaviors within a given timeframe
+- Color analysis interface allows us to understand differences between two color-morphs
+* Future work
+#+ATTR_REVEAL: :frag appear
+- More data
+- Automated segmenting of photos from an image
+- Automated behavioral annotations from videos
+* Special thanks
+- National Institutes of Health Sciences
+- MARC U STAR
+- Dr. Alvarado
+- Alvarado-Tajerian Lab
+
+* References:
+- Hugrass, L., Slavikova, J., Horvat, M., Musawi, A. A., & Crewther, D. (2017). Temporal brightness illusion changes color perception of “the dress.” Journal of Vision, 17(5), 6. https://doi.org/10.1167/17.5.6
+-  Rodriguez-Santiago, M., Nührenberg, P., Derry, J., Deussen, O., Francisco, F. A., Garrison, L. K., Garza, S. F., Hofmann, H. A., & Jordan, A. (2020). Behavioral traits that define social dominance are the same that reduce social influence in a consensus task. Proceedings of the National Academy of Sciences, 117(31), 18566–18573. https://doi.org/10.1073/pnas. 2000158117
+- Stranburg-Peshkin, A., Farine, D. R., Couzin, I. D. & Crofoot, M. C. Shared decision-making
+- HSV image: https://yeun.github.io/images/2016-03-21/
+- olor cube: [[http://matlab.izmiran.ru/help/toolbox/images/color4.html]]
+- backscatter: http://www.empiricalimaging.com/knowledge-base/underwater-photography/

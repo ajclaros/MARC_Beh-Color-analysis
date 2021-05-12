@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title><i>Astatotilapia Burtoni</i> :</title>
+<meta name="author" content="Author: Andrew Claros  Mentor:Sebastian Alvarado"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./dist/reveal.css"/>
+
+<link rel="stylesheet" href="./dist/theme/moon.css" id="theme"/>
+
+<link rel="stylesheet" href="zenburn.css"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<section class="title-slide">    <h1><i>Astatotilapia Burtoni</i> :</h1> <h2> Behavior and Color Analysis </h2> <h4>Author: Andrew Claros</h4> <h4>Mentor: Sebastian Alvarado PhD</h4></section>
+</section>
+<section>
+<section id="slide-org5f2d7ec">
+<h2 id="org5f2d7ec">Background</h2>
+<aside class="notes">
+<ul>
+<li>Lake Tanganyika: The second largest lake in Africa, and second oldest saltwater lake in the world</li>
+<li>Which contributes to its massive diversity, most notably its fish population</li>
+<li>color-morphs: reversible</li>
+
+</ul>
+
+</aside>
+
+<ul data-fragment-index="2" class="fragment">
+<li>Originates in Lake Tanganyika, Tanzinia</li>
+
+</ul>
+<ul data-fragment-index="3" class="fragment">
+<li>Two Color-morphs: Yellow and Blue</li>
+
+</ul>
+<ul data-fragment-index="4" class="fragment">
+<li>Color linked to behavioral differences</li>
+<li>(bright color associated with dominance)</li>
+
+</ul>
+
+
+<div id="org12b597f" class="figure">
+<p><img src="./fish_background.png" alt="fish_background.png" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org3e528df">
+<h2 id="org3e528df">Aim:</h2>
+<ul data-fragment-index="1" class="fragment">
+<li>Identify differences in behavior for:
+<ol>
+<li>Dominant vs. Subordinate</li>
+<li>Blue vs. Yellow</li>
+
+</ol></li>
+
+</ul>
+
+<ul data-fragment-index="2" class="fragment">
+<li>Quantify color differences (blue vs. yellow)</li>
+
+</ul>
+
+<div id="orgcb4bab4" class="figure">
+<p><img src="./fish_background.png" alt="fish_background.png" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org827e891">
+<h2 id="org827e891">Behavior analysis: data</h2>
+
+<div id="org3040e01" class="figure">
+<p><img src="./whatsneeded.png" alt="whatsneeded.png" />
+</p>
+</div>
+</section>
+<section id="slide-orgffbdbf3">
+<h3 id="orgffbdbf3">Methods: Markov chain modeling</h3>
+<aside class="notes">
+<ul>
+<li>We take videos of fish about an hours length, and score their behavior</li>
+<li>an example is at time 30sec, a fish is chasing around another fish</li>
+<li>we go about and annotate a whole hour of the fish</li>
+
+</ul>
+
+</aside>
+
+
+<div id="org336ab7a" class="figure">
+<p><img src="./abstract_markov.png" alt="abstract_markov.png" data-fragment-index="1" class="fragment" />
+</p>
+</div>
+</section>
+<section id="slide-org9ff8ce8">
+<h3 id="org9ff8ce8">Data transformations</h3>
+<ul>
+<li>Time in behavior</li>
+
+</ul>
+<p> <img src="./behavior_time_prob.png" width="950" height="700" ></p>
+</section>
+<section id="slide-org2e22bf3">
+<h3 id="org2e22bf3">Data transformations</h3>
+<ul>
+<li>Transitions</li>
+
+</ul>
+<p> <img src="./transition_prob.png" width="950" height="700" ></p>
+</section>
+<section id="slide-orgd767de7">
+<h3 id="orgd767de7">Markov chain visualization: (Territorial) Dominant</h3>
+
+<div id="org863ff64" class="figure">
+<p><img src="./T_avg.png" alt="T_avg.png" />
+</p>
+</div>
+</section>
+<section id="slide-orgbab6ac8">
+<h3 id="orgbab6ac8">Markov chain visualization: (Non-Territorial) Subordinate</h3>
+
+<div id="orgb89e7f1" class="figure">
+<p><img src="./NT_avg.png" alt="NT_avg.png" />
+</p>
+</div>
+</section>
+<section id="slide-org2bab6e1">
+<h3 id="org2bab6e1">Markov chain: plots T vs NT</h3>
+
+<div id="org869c42a" class="figure">
+<p><img src="./behavior_time_dyad_barplot.png" alt="behavior_time_dyad_barplot.png" />
+</p>
+</div>
+
+</section>
+<section id="slide-org20f668e">
+<h3 id="org20f668e">Markov chain visualization: Yellow</h3>
+
+<div id="org5916e9d" class="figure">
+<p><img src="./Yellow_avg.png" alt="Yellow_avg.png" />
+</p>
+</div>
+</section>
+<section id="slide-org84fbe93">
+<h3 id="org84fbe93">Markov chain visualization: Blue</h3>
+
+<div id="orgfd323f2" class="figure">
+<p><img src="./Blue_avg.png" alt="Blue_avg.png" />
+</p>
+</div>
+</section>
+<section id="slide-org2982a2a">
+<h3 id="org2982a2a">Markov chain: plots</h3>
+
+<div id="org800287b" class="figure">
+<p><img src="./behavior_time_barplot.png" alt="behavior_time_barplot.png" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org8467f5d">
+<h2 id="org8467f5d">AIM 2: Quantification of color</h2>
+<ul>
+<li>We want to <i>quantify color differences</i> because color is linked to behavior</li>
+
+</ul>
+</section>
+<section id="slide-org051ac4f">
+<h3 id="org051ac4f">Quantification of color: Color representation</h3>
+<ul data-fragment-index="1" class="fragment appear">
+<li>(\(\mathrm{R}_{\text{ed}},\mathrm{G}_{\text{reen}}, \mathrm{B}_{\text{lue}}\)):=(1, 0, 0)</li>
+
+</ul>
+
+<p> <img src='./red.jpeg' width="300" height="300" ></p>
+</section>
+<section id="slide-org3cc87c3">
+<h3 id="org3cc87c3">Quantification of color: Color representation</h3>
+<ul>
+<li>(\(\mathrm{R}_{\text{ed}},\mathrm{G}_{\text{reen}}, \mathrm{B}_{\text{lue}}\)):=(0, 1, 0)</li>
+
+</ul>
+<p> <img src='./green.jpeg' width="300" height="300" ></p>
+</section>
+<section id="slide-org16a4b21">
+<h3 id="org16a4b21">Quantification of color: Color representation</h3>
+<ul>
+<li>(\(\mathrm{R}_{\text{ed}},\mathrm{G}_{\text{reen}}, \mathrm{B}_{\text{lue}}\)):=(0, 0, 1)</li>
+
+</ul>
+<p> <img src='./blueimage.jpeg' width="300" height="300" ></p>
+</section>
+<section id="slide-org0561d5e">
+<h3 id="org0561d5e">Quantification of color: Color representation</h3>
+<ul>
+<li>(\(\mathrm{R}_{\text{ed}},\mathrm{G}_{\text{reen}}, \mathrm{B}_{\text{lue}}\)):=(0, 0, 0)</li>
+
+</ul>
+<p> <img src='./black.jpeg' width="300" height="300" ></p>
+</section>
+<section id="slide-orgfc64d49">
+<h3 id="orgfc64d49">Quantification of color: Color representation</h3>
+<ul>
+<li>(\(\mathrm{R}_{\text{ed}},\mathrm{G}_{\text{reen}}, \mathrm{B}_{\text{lue}}\)):=(1, 1, 1)</li>
+
+</ul>
+<p> <img src='./white.jpeg' width="300" height="300" ></p>
+
+</section>
+<section id="slide-orgd96ed55">
+<h3 id="orgd96ed55">Quantification of color: Color representation</h3>
+<ul>
+<li>(\(\mathrm{H}_{\text{ue}},\mathrm{S}_{\text{aturation}},\mathrm{V}_{\text{alue}})\)</li>
+
+</ul>
+<p> <img src='./hsv.png' width="300" height="300" ></p>
+</section>
+<section id="slide-orgbf44eca">
+<h3 id="orgbf44eca">Quantification of color: Color representation</h3>
+<ul>
+<li>&#x2026;and many more</li>
+
+</ul>
+
+</section>
+<section id="slide-orgcabff76">
+<h3 id="orgcabff76">Quantification of color: Color representation, why?</h3>
+<ul class="fragment appear">
+<li>Though data is the same, the type of representation makes certain situations easier</li>
+
+</ul>
+</section>
+<section id="slide-org367f701">
+<h3 id="org367f701">Quantification of color: Color representation, why?</h3>
+<ul>
+<li>Though data is the same, the type of representation makes certain situations easier</li>
+
+</ul>
+<div id="row" > <img class="left" src="colorcube.jpg" height="300" width="400"  /> <img class="left" src="hsv_cmap.png" height="300" width="300" height="200" /> </div>
+
+</section>
+</section>
+<section>
+<section id="slide-orge409747">
+<h2 id="orge409747">Quantification of color: Graphical interface</h2>
+<div class="outline-text-2" id="text-orge409747">
+</div>
+</section>
+<section id="slide-orgbcd6feb">
+<h3 id="orgbcd6feb">Interface</h3>
+
+<div id="org7760ad0" class="figure">
+<p><img src="./guiShow.png" alt="guiShow.png" />
+</p>
+</div>
+</section>
+<section id="slide-org4bd72be">
+<h3 id="org4bd72be">Interface</h3>
+
+<div id="orgc0b43b7" class="figure">
+<p><img src="./cielab.png" alt="cielab.png" />
+</p>
+</div>
+</section>
+<section id="slide-org83b626a">
+<h3 id="org83b626a">selecting a color range</h3>
+<p> <img src='./colorselection.gif' width="700" height="500" ></p>
+</section>
+<section id="slide-orgf89941d">
+<h3 id="orgf89941d">Quantification of color: extracting image</h3>
+
+<div id="org156e9f4" class="figure">
+<p><img src="./labfish.jpg" alt="labfish.jpg" />
+</p>
+</div>
+</section>
+<section id="slide-orgfea3610">
+<h3 id="orgfea3610">Masking an image</h3>
+</section>
+<section id="slide-orga3e2ba7">
+<h3 id="orga3e2ba7">Masking an image</h3>
+
+<div id="orge469e9a" class="figure">
+<p><img src="./mask.png" alt="mask.png" />
+</p>
+</div>
+</section>
+<section id="slide-org0ea86c1">
+<h3 id="org0ea86c1">Quantification of color: Histogram</h3>
+
+<div id="org2cee53e" class="figure">
+<p><img src="./hsv_blue_yellow.png" alt="hsv_blue_yellow.png" />
+</p>
+</div>
+</section>
+<section id="slide-orgd37621d">
+<h3 id="orgd37621d">Quantification of color: Kolmogorov-Smirnov test</h3>
+
+<div id="org964826c" class="figure">
+<p><img src="./kstest.png" alt="kstest.png" />
+</p>
+</div>
+</section>
+<section id="slide-org9a37730">
+<h3 id="org9a37730">Quantification of color:  Mann-Whitney U test</h3>
+
+<div id="orgd540a1f" class="figure">
+<p><img src="./mannwhitney.png" alt="mannwhitney.png" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org525a2ec">
+<h2 id="org525a2ec">Conclusion</h2>
+<ul class="fragment appear">
+<li>Markov chains paired with bar plots allow us to analyze behaviors within a given timeframe</li>
+<li>Color analysis interface allows us to understand differences between two color-morphs</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org1742e53">
+<h2 id="org1742e53">Future work</h2>
+<ul class="fragment appear">
+<li>More data</li>
+<li>Automated segmenting of photos from an image</li>
+<li>Automated behavioral annotations from videos</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org426248d">
+<h2 id="org426248d">Special thanks</h2>
+<ul>
+<li>National Institutes of Health Sciences</li>
+<li>MARC U STAR</li>
+<li>Dr. Alvarado</li>
+<li>Alvarado-Tajerian Lab</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org4787581">
+<h2 id="org4787581">References:</h2>
+<ul>
+<li>Hugrass, L., Slavikova, J., Horvat, M., Musawi, A. A., &amp; Crewther, D. (2017). Temporal brightness illusion changes color perception of “the dress.” Journal of Vision, 17(5), 6. <a href="https://doi.org/10.1167/17.5.6">https://doi.org/10.1167/17.5.6</a></li>
+<li>Rodriguez-Santiago, M., Nührenberg, P., Derry, J., Deussen, O., Francisco, F. A., Garrison, L. K., Garza, S. F., Hofmann, H. A., &amp; Jordan, A. (2020). Behavioral traits that define social dominance are the same that reduce social influence in a consensus task. Proceedings of the National Academy of Sciences, 117(31), 18566–18573. <a href="https://doi.org/10.1073/pnas">https://doi.org/10.1073/pnas</a>. 2000158117</li>
+<li>Stranburg-Peshkin, A., Farine, D. R., Couzin, I. D. &amp; Crofoot, M. C. Shared decision-making</li>
+<li>HSV image: <a href="https://yeun.github.io/images/2016-03-21/">https://yeun.github.io/images/2016-03-21/</a></li>
+<li>olor cube: <a href="http://matlab.izmiran.ru/help/toolbox/images/color4.html">http://matlab.izmiran.ru/help/toolbox/images/color4.html</a></li>
+<li>backscatter: <a href="http://www.empiricalimaging.com/knowledge-base/underwater-photography/">http://www.empiricalimaging.com/knowledge-base/underwater-photography/</a></li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="./dist/reveal.js"></script>
+<script src="./plugin/markdown/markdown.js"></script>
+<script src="./plugin/notes/notes.js"></script>
+<script src="./plugin/search/search.js"></script>
+<script src="./plugin/zoom/zoom.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: true,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+
+overview: true,
+width: 1440,
+height: 2560,
+margin: 0.05,
+minScale: 1.50,
+maxScale: 5.50,
+
+transition: 'nil',
+transitionSpeed: 'default',
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+});
+</script>
+</body>
+</html>

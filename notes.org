@@ -1,0 +1,63 @@
+#+TITLE: Notes
+*  data
+- This is the data i'm working with
+- where at a specific time, a behavior is recorded
+- where time is represented by a frame in the video
+
+- The goal is to turn this sequence of events into a single graphical representation
+- This representation is done by the use of a markov chain
+* markov chain
+
+- In a markov chain we have discrete events (our case, behaviors represented as nodes)
+- transition probabilities are represented as edges (the arrows)
+
+- using the data described we transform it into two other tables
+*  dataframes
+1) behavior time: the columns are the labeled behavior, the category of behavior (aggressive, aversive or reproductive) and the percent of time spent in a behavior. This is done for all fish in each group with the average and standard error noted
+2) Transition table, here we have two columns "behavior" and "behavior next", and the percentage that this occurs within the video, for each fish and their avg and strerr
+
+  - Using the transition table we can construct the markov chain visualization. What is done here is there are three classifications, aggressive, and reproductive. The red lines indicate a transition from one behavior to another within the same class and the gray represent transitions to a different class
+* graphs t nt
+- thicknes in lines indicate that this transition was preffered over others with respect to a specific behavior
+
+- For the non-territorial fish another class was recorded the aversive
+* t nt bar plot
+- Here are the bar plots of the Territorial vs Non-territorial
+- showing that the territorial fish spend more time within aggressive behaivorswhile the non-territorial fish spend more time in fleeing from the male and chasing the female
+
+* graphs blue yellow
+- this next group of graphs are conceptually similar, with the colors and line thickness, the only difference is that there are more behaviors and higher variation between behaviors
+* y b bar plt
+ - Here are the bar plots of behaviors of blue vs yellow. What is shown here is that blue tends to spend most time in aggressive behaviors while yellow has a wider spread in behaviors
+
+* aim 2 quantification of color
+- Next we go into the quantification of color, but befor that, I must talk about representation of color in a computer
+- This is an RGB representation, the primary colors, by mixing different levels you get all colors in the spectrum
+- all the way red, green, blue, by setting all channels to zero you get black, all to the max value you get white
+* hsv  colorspaces
+- but there are other color spaces. For example HSV, hue saturation and value which can be thought of as a cylinder. Going around the cylinder changes the hue, changing the radius decreases the saturation and changing vertical could be thought of a brightness value
+- there are many other types of color spaces
+* why colorspaces
+- But even though the data is the same, the representation allows extracting certian information easier
+* interface
+- this is the interface that was created, it allows for a histogram to be constructed from a folder of images, a radar plot is a histogram but superimposed onto a polar coordinate system and the ability to run tests of various tests comparing the images to eachother
+- The analysis can be done on any channel from a color space, this one is from the second channel of the  CIE*L*A*B* color space
+- There is also the ability to select a specified range
+* extract color
+- Now comes the question of how do we extract the color from this image? The majority of this image is white, which is not needed.
+- To do this we used image masking.
+- The image was converted to black and white, all values that were pure white were ignored.
+- This image shows the pixels that are analyzed
+* graphs
+- And the histogram per folder. Generally what can be inferred is that the yellow fish have a tendancy to more green hues whereas the blue fish have a tendancy towards orange
+- The statistical tests that are done are the Kolmorogov smirnov test, which tests whether the two distributions are significantly difference
+- The manwhittney U test, which tests whether the two samples come from the same population
+
+  for both tests, low p-values indicate that they are different distributions. What is shown here is that the lower left hand corner and upper right hand corners are tests of images from different photos, and have lower p-values than that of the upper left and lower right values which are photos within the same folder
+* conclusion
+- as these are tedious processes
+- In conclusion, the markov chains paired up with the bar plots allow us to analyze behavior within a video
+* future work
+- the color analysis interface allows us to quantify differences in color from two color-morphs
+- for the future, we need more data, more trials to verify the the behaviors of the fish
+- an automated segmenting offish from photos and behavioral annotations
